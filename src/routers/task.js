@@ -13,7 +13,7 @@ router.post('/tasks', auth, async (req, res) => {
   });
   try {
     await task.save();
-    res.status(201).send(`Task created!`);
+    res.status(201).send(task);
   } catch (error) {
     res.status(400);
       res.send(error.message)
@@ -93,7 +93,7 @@ router.delete('/tasks/:id', auth, async (req, res) => {
 
     if (!task) return res.status(404).send();
 
-    res.send('Task deleted successfully!');
+    res.send(task);
   } catch (error) {
     res.status(500).send(error);
   }

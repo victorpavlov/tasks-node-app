@@ -13,9 +13,6 @@ const sendWelcomeEmail = (email, name) => {
 
   sgMail
   .send(msg)
-  .catch((error) => {
-    console.error(error)
-  })
 };
 
 const sendBayEmail = (email, name) => {
@@ -28,9 +25,6 @@ const sendBayEmail = (email, name) => {
 
   sgMail
   .send(msg)
-  .catch((error) => {
-    console.error(error)
-  })
 };
 
 module.exports = {
